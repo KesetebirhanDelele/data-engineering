@@ -1,3 +1,4 @@
+-- Reference: https://www.postgresqltutorial.com/postgresql-plpgsql/postgresql-create-procedure/
 -- Creating sample bank accounts
 CREATE TABLE accounts (id numeric, balance numeric);
 
