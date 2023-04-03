@@ -1,0 +1,65 @@
+
+
+[{"Country": "France",  
+  "CustomerID": 12583,
+
+  "Description": "MINI PAINT SET VINTAGE",
+
+  "InvoiceDate": "12/1/2010 8:45",
+
+  "InvoiceNo": 536370,
+
+  "Quantity": 36,
+
+  "StockCode": 22492,
+
+  "UnitPrice": 0.65},
+
+ {"Country": "United Kingdom",
+
+  "CustomerID": 17850,
+
+  "Description": "HAND WARMER RED POLKA DOT",
+
+  "InvoiceDate": "12/1/2010 9:01",
+
+  "InvoiceNo": 536372,
+
+  "Quantity": 6,
+
+  "StockCode": 22632,
+
+  "UnitPrice": 1.85},
+
+ {"Country": "Australia",
+
+  "CustomerID": 12431,
+
+  "Description": "ALARM CLOCK BAKELIKE RED",
+
+  "InvoiceDate": "12/1/2010 10:03",
+
+  "InvoiceNo": 536389,
+
+  "Quantity": 4,
+
+  "StockCode": 22727,
+
+  "UnitPrice": 3.75},
+
+ {"Country": "United Kingdom",
+
+  "CustomerID": 14076,
+
+  "Description": "SET OF 4 PANTRY JELLY MOULDS",
+
+  "InvoiceDate": "8/2/2011 15:19",
+
+  "InvoiceNo": 562106,
+
+  "Quantity": 1,
+
+  "StockCode": 22993,
+
+  "UnitPrice": 1.25}]
+
