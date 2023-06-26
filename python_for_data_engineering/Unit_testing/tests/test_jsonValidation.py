@@ -1,4 +1,5 @@
-# The __init__.py file in the test folder is required to make Python treat directories containing the files as packages. 
+# The __init__.py file in the test folder is required to make Python treat directories 
+# containing the files as packages. 
 # Without this src.jsonValidation would not work
 
 import pytest

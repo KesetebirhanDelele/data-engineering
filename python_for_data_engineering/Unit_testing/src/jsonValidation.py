@@ -93,7 +93,7 @@ if __name__ == '__main__':
     #     }
 
     valid_transaction_dict = data[0]
-    pprint(valid_transaction_dict)
+    print(valid_transaction_dict)
     # > { 'Country': 'France',
     # >   'CustomerID': 12583,
     # >   'Description': 'MINI PAINT SET VINTAGE',
