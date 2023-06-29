@@ -1,5 +1,8 @@
+# Table of Content
+
 <!-- TOC -->
 
+- [Table of Content](#table-of-content)
 - [Preparation for this part](#preparation-for-this-part)
 - [- pip install psycopg2-binary](#--pip-install-psycopg2-binary)
 - [- have Docker installed](#--have-docker-installed)
