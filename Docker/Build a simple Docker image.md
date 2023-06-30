@@ -4,33 +4,33 @@
 
     - [Table of Content](#table-of-content)
 - [Building a Simple Docker Image](#building-a-simple-docker-image)
-        - [Create a Python file containing application code and place it in src resource folder](#create-a-python-file-containing-application-code-and-place-it-in-src-resource-folder)
-        - [Create a Dockerfile](#create-a-dockerfile)
-            - [Base image](#base-image)
-            - [Copies python code file from src folder by going back a level and going in src folder](#copies-python-code-file-from-src-folder-by-going-back-a-level-and-going-in-src-folder)
-            - [ENTRYPOINT informs docker what is going to happen when the container is up and running: run python code using the hello-world file](#entrypoint-informs-docker-what-is-going-to-happen-when-the-container-is-up-and-running-run-python-code-using-the-hello-world-file)
-        - [CHecking if there is an active container which is running](#checking-if-there-is-an-active-container-which-is-running)
-        - [Moving to the folder where the python code is located](#moving-to-the-folder-where-the-python-code-is-located)
-        - [Biulding the Docker image](#biulding-the-docker-image)
-        - [Run the python code image just created without argument](#run-the-python-code-image-just-created-without-argument)
-        - [Run the python code image just created with an argument](#run-the-python-code-image-just-created-with-an-argument)
+    - [Create a Python file containing application code and place it in src resource folder](#create-a-python-file-containing-application-code-and-place-it-in-src-resource-folder)
+    - [Create a Dockerfile](#create-a-dockerfile)
+        - [Base image](#base-image)
+        - [Copies python code file from src folder by going back a level and going in src folder](#copies-python-code-file-from-src-folder-by-going-back-a-level-and-going-in-src-folder)
+        - [ENTRYPOINT informs docker what is going to happen when the container is up and running: run python code using the hello-world file](#entrypoint-informs-docker-what-is-going-to-happen-when-the-container-is-up-and-running-run-python-code-using-the-hello-world-file)
+    - [CHecking if there is an active container which is running](#checking-if-there-is-an-active-container-which-is-running)
+    - [Moving to the folder where the python code is located](#moving-to-the-folder-where-the-python-code-is-located)
+    - [Biulding the Docker image](#biulding-the-docker-image)
+    - [Run the python code image just created without argument](#run-the-python-code-image-just-created-without-argument)
+    - [Run the python code image just created with an argument](#run-the-python-code-image-just-created-with-an-argument)
 
 <!-- /TOC -->
 
 # Building a Simple Docker Image
 
-### 1. Create a Python file containing application code and place it in src (resource folder)
+## 1. Create a Python file containing application code and place it in src (resource folder)
 
-### 2. Create a Dockerfile
+## 2. Create a Dockerfile
 > Make sure a dockerfile containing with the following content is placed in the working folder (Docker-Fundamentals):
 
-#### Base image
+### Base image
 > FROM python:3.9
 
-#### Copies python code file from src folder by going back a level and going in src folder
+### Copies python code file from src folder by going back a level and going in src folder
 > copy ./src/hello-world.py /src/hello-world.py
 
-#### ENTRYPOINT informs docker what is going to happen when the container is up and running: run python code using the hello-world file
+### ENTRYPOINT informs docker what is going to happen when the container is up and running: run python code using the hello-world file
 > ENTRYPOINT ["python","./src/hello-world.py"]
 
 Windows PowerShell
@@ -39,7 +39,7 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
 
 
-### 3. CHecking if there is an active container which is running
+## 3. CHecking if there is an active container which is running
 PS C:\Users\keset>
 >__docker ps__
 
@@ -47,10 +47,10 @@ PS C:\Users\keset>
 CONTAINER ID   IMAGE                           COMMAND        CREATED       STATUS       PORTS                                                                    NAMES
 a5ecfc58cc86   portainer/portainer-ce:2.11.1   "/portainer"   2 hours ago   Up 2 hours   0.0.0.0:8000->8000/tcp, 0.0.0.0:9000->9000/tcp, 0.0.0.0:9443->9443/tcp   portainer
 
-### 4. Moving to the folder where the python code is located 
+## 4. Moving to the folder where the python code is located 
 __PS C:\Users\keset> cd OneDrive\Desktop\projects\data-engineering\Docker\Docker-Fundamentals__
 
-### 5. Biulding the Docker image
+## 5. Biulding the Docker image
 PS C:\Users\keset\OneDrive\Desktop\projects\data-engineering\Docker\Docker-Fundamentals> 
 > __docker build -t hello-world .__
 
@@ -94,14 +94,14 @@ PS C:\Users\keset\OneDrive\Desktop\projects\data-engineering\Docker\Docker-Funda
 What's Next?
   View summary of image vulnerabilities and recommendations → docker scout quickview
 
-### 6. Run the python code image just created without argument
+## 6. Run the python code image just created without argument
 PS C:\Users\keset\OneDrive\Desktop\projects\data-engineering\Docker\Docker-Fundamentals> 
 > docker run hello-world
 
 
 hello-world
 
-### 7. Run the python code image just created with an argument
+## 7. Run the python code image just created with an argument
 PS C:\Users\keset\OneDrive\Desktop\projects\data-engineering\Docker\Docker-Fundamentals> 
 > docker run hello-world kesete
 
