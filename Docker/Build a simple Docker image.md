@@ -1,8 +1,8 @@
-## Table of Content
+# Table of Content
 
 <!-- TOC -->
 
-    - [Table of Content](#table-of-content)
+- [Table of Content](#table-of-content)
 - [Building a Simple Docker Image](#building-a-simple-docker-image)
     - [Create a Python file containing application code and place it in src resource folder](#create-a-python-file-containing-application-code-and-place-it-in-src-resource-folder)
     - [Create a Dockerfile](#create-a-dockerfile)
