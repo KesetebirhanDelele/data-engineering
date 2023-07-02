@@ -1,3 +1,35 @@
+<!-- TOC -->
+
+- [Docker Security](#docker-security)
+    - [Build Configuration](#build-configuration)
+        - [Use trusted images](#use-trusted-images)
+        - [Always use an unprivileged user](#always-use-an-unprivileged-user)
+        - [Use a separate User ID namespace](#use-a-separate-user-id-namespace)
+        - [Handle environment variables with care](#handle-environment-variables-with-care)
+        - [Don’t expose the Docker daemon socket](#dont-expose-the-docker-daemon-socket)
+    - [Privileges, capabilities, and shared resources](#privileges-capabilities-and-shared-resources)
+        - [Forbid new privileges](#forbid-new-privileges)
+        - [Define fine-grained capabilities](#define-fine-grained-capabilities)
+        - [Drop all default capabilities](#drop-all-default-capabilities)
+        - [Avoid sharing sensitive filesystem parts](#avoid-sharing-sensitive-filesystem-parts)
+        - [Use Control Groups to limit access to resources](#use-control-groups-to-limit-access-to-resources)
+    - [Filesystem](#filesystem)
+        - [Only allow read access to the root filesystem](#only-allow-read-access-to-the-root-filesystem)
+        - [Use a temporary filesystem for non-persistent data](#use-a-temporary-filesystem-for-non-persistent-data)
+        - [Use a filesystem for persistent data](#use-a-filesystem-for-persistent-data)
+    - [Network Security](#network-security)
+        - [Don’t use Docker’s default bridge docker0](#dont-use-dockers-default-bridge-docker0)
+        - [Don’t share the host’s network namespace](#dont-share-the-hosts-network-namespace)
+    - [Logging](#logging)
+        - [Export logs](#export-logs)
+        - [Setup dual logging](#setup-dual-logging)
+    - [Scan for vulnerabilities & secrets](#scan-for-vulnerabilities--secrets)
+        - [Scan for vulnerabilities](#scan-for-vulnerabilities)
+        - [Scan for secrets](#scan-for-secrets)
+    - [Summary](#summary)
+
+<!-- /TOC -->
+
 # Docker Security
 Docker containers have been an essential part of the developer's toolbox for several years now, allowing them to build, distribute and deploy their applications in a standardized way.
 
