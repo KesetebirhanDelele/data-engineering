@@ -1,6 +1,15 @@
+# Setting up Virtual Environment
+
 pip install virtualenv 
+
+# Installing Python in Virtual Environment
+
 python -m venv venv
 
 (if doesn't work, Run pip uninstall virtualenv and then pip install virtualenv)
 
+# Installing FastAPI
+
 pip install fastapi "uvicorn[standard]"
+
+
