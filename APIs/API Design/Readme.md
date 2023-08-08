@@ -27,7 +27,7 @@ pip install psycopg2
 # Install sqlalckemy
 pip install sqlalchemy
 
-# Troupblshouting pydantic ORM error
+# Troupblshouting pydantic ORM error 
 site-packages/pydantic/_internal/_config.py:261 UserWarning: Valid config keys have changed in V2:* 'orm_mode' has been renamed to 'from_attributes'
 
 Apparently it installed pydantic 2.0.2.
