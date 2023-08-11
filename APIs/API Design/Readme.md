@@ -55,3 +55,48 @@ OR
 
 # .gitignore file should have environment setting given values file which should never be uploaded to git
 .env
+
+# Alembic reference
+https://alembic.sqlalchemy.org/en/latest/index.html
+
+# Install alembic to track changes in database and rollback
+> SQLAlchemy can only create a database if it doesn't exist already. It can't make modifications.
+
+pip install alembic
+
+# See alembic commands
+alembic --help
+
+# Create alembic directory
+alembic init alembic
+
+# See alembic revision options to track changes
+alembic revision --help
+
+# Create alembic version for a revision
+alembic revision -m "create posts table"
+
+# Create your first table using alembic data migration tool
+alembic upgrade c6d2d505f0ff
+
+# See the latest revision
+alembic heads
+
+# modify a table using all latest revisions
+alembic upgrade head
+
+# modify a table with revsion one level higher than the current one
+alembic upgrade +1
+
+# Go back to the previous database version
+alembic downgrade -1
+
+# Check revision version
+alembic current 
+
+# See all history of revisions
+alembic history
+
+# How to auto-generate tables in postgres by looking at difference from sqlalchemy models
+alembic revision --autigenerate -m "auto-vote"
+
