@@ -100,3 +100,43 @@ alembic history
 # How to auto-generate tables in postgres by looking at difference from sqlalchemy models
 alembic revision --autigenerate -m "auto-vote"
 
+# how to make api request from Google Chrome but with CORS error
+fetch('http://localhost:8000/').then(res => res.json()).then(console.log)
+
+# middleware is a term that's used in most web frameworks because it's basically a function that runs before every request so if someone sends a request to our app and before it actually goes through routers it'll actually go through the middleware and then our middleware can perform some sort of operation
+
+# Documenting requirements
+pip freeze > requirements.txt
+
+# Installing all requirements at once
+pip install -r requierements.txt
+
+# Setting up git repository for fast api
+git init
+git add --all
+git commit -m "initial commit"
+git config --global user.email kesetebirhan@gmail.com
+git config --global user.name Kesetebirhan Delele
+git branch -M main
+git remote add origin https://github.com/KesetebirhanDelele/fastapi.git
+git push -u origin main
+
+# Getting Started on Heroku with Python
+Install the Heroku Command Line Interface (CLI); You can use the CLI to manage and scale your applications, provision add-ons, view your logs, and run your application locally.
+
+# Verify Heroku installation by looking at version installed
+heroku --version
+
+# login into heroku
+heroku login
+
+heroku create fastapi-kesete
+
+git push heroku main
+
+# See remote branches set-up
+git remote
+
+# create an app in Heroku
+git push heroku main
+
