@@ -140,3 +140,32 @@ git remote
 # create an app in Heroku
 git push heroku main
 
+# Creating Docker image to run application using Optimization
+FROM python:3.9.7
+
+WORKDIR /usr/src/app
+
+# Copying requirements in current directory which is /usr/src/app
+COPY requirements.txt ./
+
+# Installing requiremnts
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy source codes into current directory.
+# Implementation of these codes follows line by line. 
+# If nothing changes, COPY command copies last image
+# without the need to copy requiremnts and do a pip install
+COPY . .
+
+# Finally we have to give it the command that we want to run when 
+# we start the container
+CMD ["unvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+# Command to start building image
+docker build -t fastapi .
+
+# See list of docker images
+docker image ls
+
+docker compose is used to automaticaly spin multiple containers and close them out aswell
+
